@@ -40,23 +40,28 @@ namespace ProgSist
 			//ABRIR INICIO
 			OpenFileDialog openfile = new OpenFileDialog();
 			openfile.Title = "Seleccione un archivo";
+			openfile.Filter = "Archivos ASM|*.asm|Archivos TXT|*.txt|Archivos TODOS|*.*";
 			if (openfile.ShowDialog() == DialogResult.OK) 
 				{
-					this.laruta.Text= openfile.FileName; 
-				}
-			
+					this.laruta.Text = openfile.FileName; 
+					
 			System.IO.StreamReader sreader = new System.IO.StreamReader(@laruta.Text, System.Text.Encoding.Default);
 			String txto;
-			txto = sreader.ReadToEnd();
+            txto = sreader.ReadToEnd();
+            txtbox.Text = txto;
 			sreader.Close();
-			txtbox.Text = txto;
- 
+			
+				}
+		
+			else if (openfile.ShowDialog() == DialogResult.Cancel){}
 			//ABRIR FIN
 		}
 		
 		void BotonClick(object sender, EventArgs e)
-		{
-			Close();
+		{	
+			/*string [] lines = this.txtbox.Text.Split('\n');
+			MessageBox.Show(lines.Length.ToString());*/
+			//Close();
 		}
 	}
 }
