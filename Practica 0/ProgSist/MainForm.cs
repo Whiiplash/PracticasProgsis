@@ -44,11 +44,13 @@ namespace ProgSist
 				{
 					this.laruta.Text= openfile.FileName; 
 					System.IO.StreamReader sreader = new System.IO.StreamReader(@laruta.Text, System.Text.Encoding.Default);
-					List<string> lines = new List<string>();
+					
 					String txto;
 					while ((txto = sreader.ReadLine()) != null) {
-						//txtbox.Text = txto+"\n";
-						txtbox.AppendText(txto+"\n");
+						string[] tokens = txto.Split(new char[]{' ','\t'});
+						foreach(string palabra in tokens){
+							txtbox.AppendText(palabra+"\n");
+						}
 					}
 					sreader.Close();
 					
