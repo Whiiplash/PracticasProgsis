@@ -43,13 +43,16 @@ namespace ProgSist
 			if (openfile.ShowDialog() == DialogResult.OK) 
 				{
 					this.laruta.Text= openfile.FileName; 
-			
-			System.IO.StreamReader sreader = new System.IO.StreamReader(@laruta.Text, System.Text.Encoding.Default);
-			String txto;
-			txto = sreader.ReadToEnd();
-			sreader.Close();
-			txtbox.Text = txto;
-			}
+					System.IO.StreamReader sreader = new System.IO.StreamReader(@laruta.Text, System.Text.Encoding.Default);
+					List<string> lines = new List<string>();
+					String txto;
+					while ((txto = sreader.ReadLine()) != null) {
+						//txtbox.Text = txto+"\n";
+						txtbox.AppendText(txto+"\n");
+					}
+					sreader.Close();
+					
+				}
 			//ABRIR FIN
 		}
 		
