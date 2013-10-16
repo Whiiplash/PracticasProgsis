@@ -43,14 +43,13 @@ namespace ProgSist
 			if (openfile.ShowDialog() == DialogResult.OK) 
 				{
 					this.laruta.Text= openfile.FileName; 
-				}
 			
 			System.IO.StreamReader sreader = new System.IO.StreamReader(@laruta.Text, System.Text.Encoding.Default);
 			String txto;
 			txto = sreader.ReadToEnd();
 			sreader.Close();
 			txtbox.Text = txto;
- 
+			}
 			//ABRIR FIN
 		}
 		
