@@ -43,6 +43,7 @@ namespace ProgSist
 			openfile.Filter = "Archivos ASM|*.asm|Archivos TXT|*.txt|Archivos TODOS|*.*";
 			if (openfile.ShowDialog() == DialogResult.OK) 
 				{
+<<<<<<< HEAD
 					this.laruta.Text = openfile.FileName; 
 					
 			System.IO.StreamReader sreader = new System.IO.StreamReader(@laruta.Text, System.Text.Encoding.Default);
@@ -54,6 +55,21 @@ namespace ProgSist
 				}
 		
 			else if (openfile.ShowDialog() == DialogResult.Cancel){}
+=======
+					this.laruta.Text= openfile.FileName; 
+					System.IO.StreamReader sreader = new System.IO.StreamReader(@laruta.Text, System.Text.Encoding.Default);
+					
+					String txto;
+					while ((txto = sreader.ReadLine()) != null) {
+						string[] tokens = txto.Split(new char[]{' ','\t'});
+						foreach(string palabra in tokens){
+							txtbox.AppendText(palabra+"\n");
+						}
+					}
+					sreader.Close();
+					
+				}
+>>>>>>> c6bc58a216efab6e3fabf0ded5efcb9de3b93811
 			//ABRIR FIN
 		}
 		
