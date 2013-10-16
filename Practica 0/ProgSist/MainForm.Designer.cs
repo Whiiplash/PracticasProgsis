@@ -131,7 +131,7 @@ namespace ProgSist
 			this.Controls.Add(this.btabrir);
 			this.Controls.Add(this.label1);
 			this.Name = "MainForm";
-			this.Text = "ProgSist";
+			this.Text = "Taller de Programacion de Sistemas";
 			this.ResumeLayout(false);
 			this.PerformLayout();
 		}
