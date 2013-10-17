@@ -49,7 +49,14 @@ namespace ProgSist
 					while ((txto = sreader.ReadLine()) != null) {
 						string[] tokens = txto.Split(new char[]{' ','\t'});
 						foreach(string palabra in tokens){
-							txtbox.AppendText(palabra+"\n");
+							
+							if(palabra!=""){
+							if(palabra[0]==';'){
+							   txtbox.AppendText("COMENTARIOOO\n");
+							   }else{
+							   	txtbox.AppendText(palabra+"\n");
+								}
+							}
 						}
 					}
 					sreader.Close();
