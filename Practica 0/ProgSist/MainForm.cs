@@ -49,10 +49,10 @@ namespace ProgSist
 					while ((txto = sreader.ReadLine()) != null) {
 						string[] tokens = txto.Split(new char[]{' ','\t'});
 						foreach(string palabra in tokens){
-<<<<<<< HEAD
+//<<<<<<< HEAD
 							txtbox.AppendText(palabra+"\n");
 			
-=======
+//=======
 							
 							if(palabra!=""){
 							if(palabra[0]==';'){
@@ -61,7 +61,7 @@ namespace ProgSist
 							   	txtbox.AppendText(palabra+"\n");
 								}
 							}
->>>>>>> 42af67f61b2e7b1b767d1f94ca5e4cb4830b5864
+//>>>>>>> 42af67f61b2e7b1b767d1f94ca5e4cb4830b5864
 						}
 					}
 					sreader.Close();
@@ -73,9 +73,9 @@ namespace ProgSist
 		
 		void BotonClick(object sender, EventArgs e)
 		{
-			//Close();
-			FormLst lst = new FormLst();
-			lst.Show();
+			Close();
+			/*FormLst lst = new FormLst();
+			lst.Show();*/
 
 		}
 		}
