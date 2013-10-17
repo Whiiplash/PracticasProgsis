@@ -135,12 +135,12 @@ namespace ProgSist
 			this.ResumeLayout(false);
 			this.PerformLayout();
 		}
+		private System.Windows.Forms.Button btabrir;
 		private System.Windows.Forms.OpenFileDialog openfile;
 		private System.Windows.Forms.Button btlimpiar;
 		private System.Windows.Forms.Button boton;
 		private System.Windows.Forms.TextBox txtbox;
 		private System.Windows.Forms.Label laruta;
-		private System.Windows.Forms.Button btabrir;
 		private System.Windows.Forms.Label label1;
 	}
 }

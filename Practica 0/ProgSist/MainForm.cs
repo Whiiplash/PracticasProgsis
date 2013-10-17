@@ -28,7 +28,7 @@ namespace ProgSist
 			// TODO: Add constructor code after the InitializeComponent() call.
 			//
 		}
-		
+			
 		void BtlimpiarClick(object sender, EventArgs e)
 		{
 			this.laruta.Text="";		
@@ -50,17 +50,23 @@ namespace ProgSist
 						string[] tokens = txto.Split(new char[]{' ','\t'});
 						foreach(string palabra in tokens){
 							txtbox.AppendText(palabra+"\n");
+			
 						}
 					}
 					sreader.Close();
 					
 				}
 			//ABRIR FIN
+			
 		}
 		
 		void BotonClick(object sender, EventArgs e)
 		{
-			Close();
+			//Close();
+			FormLst lst = new FormLst();
+			lst.Show();
+
+		}
 		}
 	}
-}
+
